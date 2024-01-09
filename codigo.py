@@ -7,6 +7,7 @@ pyautogui.press("win") #aperta a tecla
 pyautogui.write("chrome") #digita a palavra
 pyautogui.press("enter") #aperta a tecla enter 
 
+time.sleep(3)
 link = "https://dlp.hashtagtreinamentos.com/python/intensivao/login" #variavel com o link
 pyautogui.write(link) # digita todo o link
 
@@ -22,6 +23,7 @@ pyautogui.write("flamengo100%")
 #apertar logar
 #pyautogui.click(x=704, y=595)#logando com a posição do botao
 pyautogui.press("enter")#logando com o enter
+
 time.sleep(3)
 
 #Importar a base de dados
@@ -55,9 +57,9 @@ for linha in tabela.index:
     pyautogui.press("tab")
     #obs
     obs = tabela.loc[linha,"obs"]
-    if not pandas.isna(obs):#verifica se o obs esta vazia,se for falso(nao estiver vazio) executa
+    if not pandas.isna(obs):#verifica se o obs esta vazio,se for falso(nao estiver vazio) executa
         pyautogui.write()
     
     pyautogui.press("tab")
     pyautogui.press("enter")
-    pyautogui.scroll(5000)
+    pyautogui.scroll(5000) #faz a rolagem da tela para cima
